@@ -1,4 +1,4 @@
 const { Sequelize } = require('sequelize')
 require('dotenv').config()
 
-module.exports = new Sequelize(process.env.MYSQL_URI, { dialect: 'postgre' })
+module.exports = new Sequelize(process.env.DB_URI, { dialect: 'mysql' })
