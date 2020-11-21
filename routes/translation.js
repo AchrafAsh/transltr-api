@@ -149,7 +149,7 @@ router.get('/lang', async (req, res) => {
         })
 
         availableLangs = availableLangs.lang.split(';')
-        return res.status(200).send(availableLangs)
+        return res.status(200).json(availableLangs)
     }
 })
 
