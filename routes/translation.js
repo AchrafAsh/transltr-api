@@ -148,6 +148,13 @@ router.get('/lang', async (req, res) => {
             attributes: ['lang']
         })
 
+        console.log({ availableLangs })
+
+        if (availableLangs === null)
+            return res
+                .status(404)
+                .send("Your website isn't allowed to use transltr")
+
         availableLangs = availableLangs.lang.split(';')
         return res.status(200).json(availableLangs)
     }
